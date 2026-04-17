@@ -1,20 +1,93 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🌱 Green Habit Tracker
 
-# Run and deploy your AI Studio app
+A simple web app to help people build small eco-friendly habits and actually stay consistent with them.
 
-This contains everything you need to run your app locally.
+I built this project for the DEV Weekend Challenge (Earth Day Edition) because I realized something — a lot of people *want* to be more sustainable, but most of the time we don’t know where to start, or we stop after a few days.
 
-View your app in AI Studio: https://ai.studio/apps/f7762bc0-22e1-49f4-a619-5925bf52ce23
+So instead of something complex, I wanted to make something that feels:
+- simple
+- motivating
+- a bit fun
+- and actually usable daily
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## ✨ What it does
 
+Green Habit Tracker lets you:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Choose a few eco habits (like bringing a reusable bottle or avoiding plastic)
+- Track them daily
+- Earn points and build streaks
+- See your impact over time
+- Get **AI-generated eco tips** based on what you actually did
+
+The idea is:  
+> small habits → consistent actions → real impact
+
+---
+
+## 📱 Main Features
+
+### 📝 Habit Tracking
+Pick a few habits and check them off daily.
+
+### 🎯 Points & Streaks
+- Earn points for every completed habit  
+- Build a daily streak to stay consistent  
+
+### 🎉 Reward Feedback
+When you complete a habit:
+- you get a **+points popup**
+- small animations (card scale, icon bounce, etc.)
+- makes it feel less like a task, more like a game
+
+### 🌍 Environmental Impact
+- Simple CO₂ reduction estimation  
+- Weekly progress chart  
+- Helps visualize “small actions actually matter”
+
+### 🤖 AI Eco Tips (Gemini)
+This is one of my favourite parts.
+
+Instead of static tips, the app:
+- looks at what habits you completed
+- sends that to Gemini
+- generates a short, encouraging eco tip
+
+So it feels more personal, not generic.
+
+---
+
+## 🛠️ Tech Stack
+
+- React (Vite)
+- TypeScript
+- Tailwind CSS
+- Recharts (for charts)
+- Google Gemini API
+- localStorage (for persistence)
+
+---
+
+## ⚙️ How it works (simple version)
+
+- User selects habits during onboarding
+- Daily:
+  - mark habits as done
+  - points + streak update
+- App calculates simple impact values
+- Completed habits are sent to Gemini → returns eco tip
+- Everything is saved in localStorage
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# install dependencies
+npm install
+
+# run locally
+npm run dev
+```
